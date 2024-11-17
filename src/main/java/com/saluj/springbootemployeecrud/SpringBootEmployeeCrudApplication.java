@@ -8,6 +8,7 @@ public class SpringBootEmployeeCrudApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(SpringBootEmployeeCrudApplication.class, args);
+
     }
 
 }
