@@ -16,6 +16,9 @@ public class EmployeeSvc {
 
 
 
+
+
+
     public Employee saveEmp(Employee emp){
         return emprepo.save(emp);
     }
@@ -26,5 +29,14 @@ public class EmployeeSvc {
 
     public Optional<Employee> getEmpById(Long id){
         return emprepo.findById(id);
+    }
+
+    public Employee updateMbl(Long id, Long contact){
+        Employee emp = emprepo.findById(id).orElseThrow(
+                () -> new IllegalArgumentException("person with "+id+" does not exist")
+        );
+        emp.setContact(contact);
+        return emprepo.save(emp);
+
     }
 }
