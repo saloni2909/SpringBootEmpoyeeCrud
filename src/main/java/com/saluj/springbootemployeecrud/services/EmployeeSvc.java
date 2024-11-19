@@ -14,11 +14,6 @@ public class EmployeeSvc {
     @Autowired
     private EmployeeRepo emprepo;
 
-
-
-
-
-
     public Employee saveEmp(Employee emp){
         return emprepo.save(emp);
     }
